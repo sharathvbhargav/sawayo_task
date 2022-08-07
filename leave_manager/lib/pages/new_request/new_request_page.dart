@@ -53,14 +53,10 @@ class _NewRequestPageState extends State<NewRequestPage> {
 
   @override
   Widget build(BuildContext context) {
-    String fromDate = "";
-    String toDate = "";
+
     if(AppConstants.minDate != null && AppConstants.maxDate != null ){
       _fromDateController.text =  DateFormat("dd-MM-yyyy").format(AppConstants.minDate!);
       _toDateController.text = DateFormat("dd-MM-yyyy").format(AppConstants.maxDate!);
-
-    } else{
-      print("not yet");
     }
     return Scaffold(
       backgroundColor: AppColors.background,
